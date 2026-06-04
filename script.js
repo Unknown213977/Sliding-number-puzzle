@@ -40,7 +40,7 @@ class stopWatch {
         this.display.textContent = this.formatTime(this.elapsedTime);
     }
     formatTime(time) {
-        const centiseconds = time % 100;
+        const centiseconds = Math.floor(time / 10) % 100;
         const seconds = Math.floor(time / 1000) % 60;
         const minutes = Math.floor(time / 60000) % 60;
         if (time < 3600000) {
